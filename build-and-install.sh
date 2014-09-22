@@ -80,7 +80,8 @@ export CFLAGS="-march=i486 -mtune=i686 -Os -pipe -Wno-error=deprecated-declarati
 export CXXFLAGS="-march=i486 -mtune=i686 -Os -pipe"
 export LDFLAGS="-Wl,-O1 -L/usr/local/lib -ltirpc"
 
-./configure --with-x --without-pam --without-gtkmm --without-procps --without-dnet --without-icu
+#./configure --with-x --without-pam --without-gtkmm --without-procps --without-dnet --without-icu
+./configure --without-x --without-pam --without-gtkmm --without-procps --without-dnet --without-icu
 make
 mkdir $INSTDIR
 make DESTDIR=$INSTDIR install-strip
